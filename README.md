@@ -34,16 +34,27 @@ Git – Version control
 ### 📁 Structure du Projet
 
 snowflake_data_project/
+
 │── models/
+
 │     ├── staging/
+
 │     ├── intermediate/
+
 │     └── marts/
+
 │── dags/
+
 │── logs/
+
 │── seeds/
+
 │── macros/
+
 │── dbt_project.yml
+
 │── requirements.txt
+
 │── README.md
 
 ---
@@ -51,6 +62,7 @@ snowflake_data_project/
 ### ⚙️ Installation & Configuration
 1️⃣ Cloner le Dépôt
 git clone https://github.com/OUMAYMANIOUA/dbt_snowflake_project.git
+
 cd your-project
 
 2️⃣ Créer un Environnement Virtuel
@@ -62,6 +74,7 @@ Activer l’environnement :
 venv\Scripts\activate
 
 3️⃣ Installer les Dépendances
+
 pip install -r requirements.txt
 
 4️⃣ Configurer dbt pour Snowflake
@@ -69,6 +82,7 @@ pip install -r requirements.txt
 Ajouter ceci dans ~/.dbt/profiles.yml :
 
 snowflake_project:
+```yaml
   outputs:
     dev:
       type: snowflake
@@ -80,7 +94,7 @@ snowflake_project:
       warehouse: finance_wh
       schema: raw
   target: dev
-
+```
 ---
 
 ### 🏗️ Exécution des Modèles dbt
